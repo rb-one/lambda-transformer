@@ -11,7 +11,7 @@ functions:
     environment:
       ENV_NAME: Docker
     image:
-      uri: 221082178166.dkr.ecr.us-east-2.amazonaws.com/mi-repos-lambda-test:latest
+      uri: ${AWS::AccountId}.dkr.ecr.us-east-2.amazonaws.com/mi-repos-lambda-test:latest
     events:
       - http:
           path: similarity
