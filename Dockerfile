@@ -11,10 +11,15 @@ COPY app.py requirements.txt ./
 RUN python -m pip install --upgrade pip
 
 # Install Sentence Transformer and other dependencies in requirements.txt
-RUN pip3 install --no-cache-dir -r requirements.txt --default-timeout=2000
+RUN pip install --no-cache-dir -r requirements.txt --default-timeout=200
+
+
+# Actualiza el sistema e instala unzip
+RUN dnf install -y unzip 
 
 # Create the directory 'model'
 RUN mkdir -p ./model
+
 
 # Download the sentence-transfomer model and put it in the directory './model'
 RUN curl https://public.ukp.informatik.tu-darmstadt.de/reimers/sentence-transformers/v0.2/all-MiniLM-L6-v2.zip -o ./model/all-MiniLM-L6-v2.zip

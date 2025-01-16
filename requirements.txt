@@ -1,3 +1,5 @@
-https://download.pytorch.org/whl/cpu/torch-1.10.1%2Bcpu-cp37-cp37m-linux_x86_64.whl
-huggingface-hub==0.11.1
-sentence-transformers==2.2.2
+# https://download.pytorch.org/whl/cpu/torch-1.10.1%2Bcpu-cp37-cp37m-linux_x86_64.whl
+--find-links https://download.pytorch.org/whl/torch_stable.html
+huggingface-hub==0.27.1
+sentence-transformers==3.3.1
+torch==2.3.1+cpu
